@@ -1,0 +1,21 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    
+    <ion-item class="list card" ng-repeat="products in products">
+      <div class="item item-avatar">
+        <img src="avatar.jpg">
+        <h2>{{product.name}}</h2>
+        <p>{{product.tagline}}</p>
+      </div>
+
+      <div class="item-image">
+        <img style="height: 250px, width: 250px" src="{{products.image}}">
+      </div>
+
+          <a class="item item-icon-left assertive" href="#">
+            <i class="icon ion-pricetag"></i>
+            Start listening
+          </a>
+    </ion-item>
+  </ion-content>
+</ion-view>
