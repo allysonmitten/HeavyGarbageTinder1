@@ -9,11 +9,11 @@ app.controller('LoginCtrl', function($scope, $state, $ionicPopup, Auth){
   // An elaborate, custom popup
   var myPopup = $ionicPopup.show({
     templateUrl: 'templates/partials/login.html',
-    title: 'Signin',
+    title: 'Login or Register',
     scope: $scope,
     buttons: [
       { text: '<b>Login</b>',
-        type: 'button-energized',
+        type: 'button-signin',
         onTap: function(user) {
           user = $scope.user;
             Auth.login(user).then(function(){
@@ -25,7 +25,7 @@ app.controller('LoginCtrl', function($scope, $state, $ionicPopup, Auth){
          },
       {
         text: '<b>Register</b>',
-        type: 'button-calm',
+        type: 'button-register',
         onTap: function(user) {
           user = $scope.user;
             //register the user
