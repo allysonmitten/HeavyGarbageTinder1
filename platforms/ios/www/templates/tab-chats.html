@@ -1,7 +1,26 @@
 <ion-view view-title="Chats">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+     <form ng-submit="button(product)">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Your Name</span>
+          <input type="text" ng-model="product.name" placeholder="Mattress">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Tagline</span>
+          <input type="text" ng-model="product.tagline" placeholder="tagline">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Items in Heavy Garbage</span>
+          <input type="text" ng-model="product.description" placeholder="Hashtags of items">
+        </label>
+        <img style="height: 200px; width: 200px"; src="../img/garbage.jpg">
+        <br>
+        <button type="submit" class="button button-block button-balanced">Submit</button>
+        
+      </form>
+
+     <!-- <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
         <img ng-src="{{chat.face}}">
         <h2>{{chat.name}}</h2>
         <p>{{chat.lastText}}</p>
@@ -9,8 +28,9 @@
 
         <ion-option-button class="button-assertive" ng-click="remove(chat)">
           Delete
-        </ion-option-button>
+        </ion-option-button> -->
       </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>
+

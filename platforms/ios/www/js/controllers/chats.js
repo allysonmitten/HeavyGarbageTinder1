@@ -1,8 +1,6 @@
-angular.module('starter.controllers', [])
+'use strict';
 
-.controller('DashCtrl', function($scope) {})
-
-.controller('ChatsCtrl', function($scope, Chats) {
+app.controller('ChatsCtrl', function($scope, Chats, Products) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -15,14 +13,12 @@ angular.module('starter.controllers', [])
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
-})
+  $scope.image ='http://www.capebretonpost.com/media/photos/unis/2012/04/10/2012-04-10-04-55-02-garbage.jpg';
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
+     $scope.button = function(product){
+      console.log('Button was clicked', product, $scope.image);
+      Products.saveProduct(product, $scope.image);
+  }
+
 });

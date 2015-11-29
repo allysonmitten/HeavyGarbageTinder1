@@ -1,0 +1,48 @@
+<ion-view view-title="Photo">
+  <ion-content>
+    <ion-list>
+     <form ng-submit="button(product)">
+      <div class="row">
+
+        <div class="col col-33">
+          <img style="height: 200px; width: 200px"; ng-src="{{imgURI}}">
+        </div>
+        <div class="col col-20 col-offset-10">
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">Your Name</span>
+          <input type="text" ng-model="product.name" placeholder="Mattress">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Tagline</span>
+          <input type="text" ng-model="product.tagline" placeholder="tagline">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Items in Heavy Garbage</span>
+          <input type="text" ng-model="product.description" placeholder="Hashtags of items">
+        </label>
+        </div>
+      </div>
+        
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Items in Heavy Garbage</span>
+          <input type="text" ng-model="product.description" placeholder="Hashtags of items">
+        </label>
+        <br>
+        <button type="submit" class="button button-block button-balanced">Submit</button>
+        
+      </form>
+
+     <!-- <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button> -->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+

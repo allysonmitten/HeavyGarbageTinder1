@@ -7,7 +7,8 @@
 // 'starter.controllers' is found in controllers.js
 var app = angular.module('starter', [
     'ionic', 
-    'firebase'
+    'firebase',
+    'ngCordova'
     ])
 
 .run(function($ionicPlatform) {
@@ -36,6 +37,12 @@ var app = angular.module('starter', [
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+    .state('login', {
+      url:'/login',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginCtrl'
+    })
+
   // setup an abstract state for the tabs directive
     .state('tab', {
     url: '/tab',
@@ -54,6 +61,27 @@ var app = angular.module('starter', [
       }
     }
   })
+
+  .state('tab.photo', {
+      url: '/photo',
+      views: {
+        'tab-photo': {
+          templateUrl: 'templates/tab-photo.html',
+          controller: 'PhotoCtrl'
+        }
+      }
+    })
+
+  .state('tab.photo-detail', {
+      url: '/photo/detail',
+      views: {
+        'tab-photo': {
+          templateUrl: 'templates/tab-photo-detail.html',
+          controller: 'PhotoDetailCtrl'
+        }
+      }
+    })
+
 
   .state('tab.chats', {
       url: '/chats',
@@ -85,6 +113,6 @@ var app = angular.module('starter', [
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/login');
 
 });
