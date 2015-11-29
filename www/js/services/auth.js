@@ -18,7 +18,7 @@ app.factory('Auth', function(FURL, $firebaseAuth, $firebaseObject, $state) {
       return ref.child('profile').child(uid).set(profile);
     },
 
-    login: function (user) {
+    login: function(user){
       console.log("we got to login function");
       return auth.$authWithPassword({
         email: user.email,
@@ -26,7 +26,7 @@ app.factory('Auth', function(FURL, $firebaseAuth, $firebaseObject, $state) {
       });
     },
 
-    register: function (user) {
+    register: function(user) {
       console.log('in the register');
       return auth.$createUser({
         email: user.email,
@@ -46,15 +46,16 @@ app.factory('Auth', function(FURL, $firebaseAuth, $firebaseObject, $state) {
     }
   }
 
-  auth.$onAuth(function(authData) {
-    if (authData) {
-      Auth.user = authData;
+  auth.$onAuth(function(authData){
+    if(authData){
+      Auth.user=authData;
       Auth.user.profile = $firebaseObject(ref.child('profile').child(authData.uid));
       console.log('the user has already logged in');
       $state.go('tab.dash');
     }else {
       $state.go('login');
     }
+
   });
 
   function get_gravatar(email, size) {
