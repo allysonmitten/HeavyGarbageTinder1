@@ -5,30 +5,28 @@
       <div class="row">
 
         <div class="col col-33">
-          <img style="height: 200px; width: 200px"; ng-src="{{imgURI}}">
+          <img style="height: 140px; width: 140px"; ng-src="{{imgURI}}">
         </div>
         <div class="col col-20 col-offset-10">
-          <label class="item item-input item-stacked-label">
-          <span class="input-label">Your Name</span>
-          <input type="text" ng-model="product.name" placeholder="Mattress">
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Tagline</span>
-          <input type="text" ng-model="product.tagline" placeholder="tagline">
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Items in Heavy Garbage</span>
-          <input type="text" ng-model="product.description" placeholder="Hashtags of items">
-        </label>
+          <label class="item item-input item-stacked-label inputUpload">
+            <input type="text" ng-model="product.name" placeholder="Mattress">
+          </label>
+          <label class="item item-input item-stacked-label inputUploadTop">
+            <input type="text" ng-model="product.tagline" placeholder="tagline">
+          </label>
+          <label class="item item-input item-stacked-label inputUploadTop">
+            <input type="text" ng-model="product.description" placeholder="Hashtags of items">
+          </label>
+          </div>
         </div>
-      </div>
         
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Items in Heavy Garbage</span>
+        <label class="item item-input item-stacked-label inputUploadTop">
           <input type="text" ng-model="product.description" placeholder="Hashtags of items">
         </label>
         <br>
-        <button type="submit" class="button button-block button-balanced">Submit</button>
+        <button type="submit" class="button button-block button-balanced">
+          Submit
+        </button>
         
       </form>
 

@@ -75,7 +75,7 @@ var app = angular.module('starter', [
   .state('tab.photo-detail', {
       url: '/photo/detail',
       views: {
-        'tab-photo': {
+        'tab-account': {
           templateUrl: 'templates/tab-photo-detail.html',
           controller: 'PhotoDetailCtrl'
         }
