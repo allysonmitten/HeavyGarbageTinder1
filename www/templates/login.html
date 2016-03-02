@@ -1,16 +1,29 @@
-<ion-view view-title="Login">
- <ion-content class="padding" style="background-color:#ffffff ">
-   <div class="buffer" style="height: 120px"></div>
-
- <center><img src="img/hgtlogosm.png"></center>
- <br>
-   <!-- <h1 align="center" style="color:#ffffff ">Etsy Clone</h1> -->
-   <div class="row">
-     <div class="col col-33 col-offset-33">
-       <center>
-       <button class="button button-block button-light" ng-click="emailLogin()">Login</button></center>
+<ion-view>
+ <ion-content>
+ 	<center>
+    <div class="row">
+      <div class="col">
+   <div class="buffer" style="height: 130px"></div>
+	   <img class="frontImg" src="img/hgtfront.png">
+     
+		  <button class="button signInButton" ng-click="emailLogin()">Sign In</button>
+   
+      
+       <button class="button button-block button-positive fbButton">Login with Facebook</button>
+         </div>
+    </div>
+  		 <div class="row">
+        <div class="col" style="clear:none">
+       <button class="button button-block signUpButton"> Sign Up </button>
      </div>
-   </div>
+     <div class="col">
+			 <button class="button-block signUpButton"> Browse </button>
+      </div>
+      </div>
 
+   </center>
+   <br />
+   <br />
+   <br />
  </ion-content>
 </ion-view>
